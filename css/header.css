@@ -1,0 +1,67 @@
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 5px 0;
+    background: #1e232f;
+    z-index: 101;
+    /*margin-bottom: 100px;*/
+}
+
+.header-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 auto;
+}
+
+.header-content img {
+    height: 35px;
+    width: 35px;
+    margin-left: 10px; /* Добавляем отступ между текстом и изображением */
+}
+
+.brand {
+    color: white;
+    margin-left: 15px;
+    font-size: 30px;
+    text-decoration: none;
+    display: flex; /* Чтобы можно было вертикально выравнивать элементы */
+    align-items: center; /* Выравнивание по центру по вертикали */
+    border-bottom: none;
+}
+
+.brand:hover {
+    color: rgba(255, 255, 255, 0.5);
+}
+
+nav {
+    position: relative;
+    display: flex;
+    align-items: center;
+    background: #1e232f;
+    padding: 10px 0;
+}
+
+nav a {
+    position: relative;
+    text-decoration: none;
+    padding: 15px 25px;
+    color: #fff;
+    font-weight: 400;
+    letter-spacing: 0.1em;
+    margin-right: 15px;
+}
+
+#marker {
+    position: absolute;
+    bottom: 0;
+    height: 100%;
+    width: 90px;
+    border-bottom: 5px solid #80f9ff;
+    background: linear-gradient(0deg, #08f9ff33, transparent);
+    transition: 0.5s;
+    pointer-events: none;
+    filter: drop-shadow(0 5px 25px #80f9ff);
+}
