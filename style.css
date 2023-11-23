@@ -3,6 +3,8 @@
 @import "css/base.css";
 @import "css/header.css";
 @import "css/footer.css";
+@import "css/about.css";
+@import "css/catalog.css";
 
 /*=============== GOOGLE FONTS ===============*/
 @import url("https://fonts.googleapis.com/css2?family=Bai+Jamjuree:wght@400;500;600&display=swap");
@@ -33,25 +35,25 @@ a {
     text-decoration: none;
 }
 
-/*img {
-    display: block;
-    max-width: 100%;
-    height: auto;
-}*/
-
 /*=============== CARD ===============*/
 .container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
+    margin-top: 20px;
     height: auto;
+    /*display: flex;*/
+    /*justify-content: center;
+    align-items: center;
+    flex-direction: column;*/
 }
+
 .slider-title {
     font-size: 2rem;
     margin-bottom: 20px;
+    text-align: center;
     color: #fff; /* Цвет текста заголовка */
+    font-family: 'Comfortaa', sans-serif;
+
 }
+
 .card__container {
     padding-block: 2rem;
     max-width: max-content;
@@ -71,9 +73,10 @@ a {
 
 .card__image {
     position: relative;
-    background-color: var(--first-color-light);
+    background-color: var(--container-color);
     padding-top: 1.5rem;
     margin-bottom: -.75rem;
+
 }
 
 .card__data {
@@ -82,11 +85,14 @@ a {
     border-radius: 1rem;
     text-align: center;
     position: relative;
+    height: 260px;
     z-index: 10;
 }
 
 .card__img {
     width: 180px;
+    height: 215px;
+    top: -10px;
     margin: 0 auto;
     position: relative;
     z-index: 5;
@@ -95,7 +101,7 @@ a {
 .card__shadow {
     width: 200px;
     height: 200px;
-    background-color: var(--first-color-alt);
+    background-color: #0f1219;
     border-radius: 50%;
     position: absolute;
     top: 3.75rem;
@@ -108,12 +114,22 @@ a {
 .card__name {
     font-size: var(--h2-font-size);
     color: var(--second-color);
-    margin-bottom: .75rem;
+    margin-bottom: .25rem;
 }
 
 .card__description {
     font-weight: 500;
-    margin-bottom: 1.75rem;
+    margin-bottom: .25rem;
+    max-height: 100px;
+    overflow: hidden;
+}
+
+.price p {
+    color: var(--second-color);
+    font-size: 20px;
+    font-weight: 600;
+    margin-bottom: .2rem;
+    bottom: 0;
 }
 
 .card__button {
@@ -123,6 +139,7 @@ a {
     border-radius: .25rem;
     color: var(--dark-color);
     font-weight: 600;
+    bottom: 0;
 }
 
 /* Swiper class */
@@ -157,7 +174,7 @@ a {
     background-color: var(--second-color);
 }
 
-/*=============== BREAKPOINTS ===============*/
+/*!*=============== BREAKPOINTS ===============*!*/
 /* For small devices */
 @media screen and (max-width: 320px) {
     .card__data {
@@ -165,7 +182,7 @@ a {
     }
 }
 
- /*For medium devices*/
+/*For medium devices*/
 @media screen and (min-width: 768px) {
     .card__content {
         margin-inline: 3rem;
@@ -186,6 +203,7 @@ a {
     .swiper-button-prev {
         left: -1rem;
     }
+
     .swiper-button-next {
         right: -1rem;
     }
@@ -200,7 +218,8 @@ a {
     color: #fff;
     text-align: center;
     font-family: 'Comfortaa', sans-serif;
-    font-weight: 300;
+    font-weight: 600;
+    font-size: 2rem;
 }
 
 .advantages .cards {
@@ -404,4 +423,145 @@ a {
     box-shadow: 0 1px 15px rgba(1, 1, 1, 0.2);
 }
 
+#testimonials {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+}
 
+.testimonial-heading {
+    letter-spacing: 1px;
+    margin: 30px 0 10px;
+    padding: 10px 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    font-size: 2.2rem;
+    font-weight: 500;
+    font-family: 'Comfortaa', sans-serif;
+    color: #fff;
+    /*padding: 10px 20px;*/
+}
+
+.testimonial-heading h1 {
+    font-size: 2.2rem;
+    font-weight: 500;
+    font-family: 'Comfortaa', sans-serif;
+    color: #fff;
+}
+
+.testimonial-heading span {
+    font-size: 1.3rem;
+    color: #fff;
+    margin-bottom: 10px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+
+.testimonials-box-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    width: 100%;
+}
+
+.testimonial-box {
+    width: 500px;
+    box-shadow: 2px 2px 30px rgba(0, 0, 0, 0.1);
+    background-color: var(--container-color);
+    padding: 20px;
+    margin: 15px;
+    cursor: pointer;
+}
+
+.profile-img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    overflow: hidden;
+    margin-right: 10px;
+}
+
+.profile-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+.profile {
+    display: flex;
+    align-items: center;
+}
+
+.name-user {
+    display: flex;
+    flex-direction: column;
+}
+
+.name-user strong {
+    color: #fff;
+    font-size: 1.1rem;
+    letter-spacing: 0.5px;
+}
+
+.name-user span {
+    color: #979797;
+    font-size: 0.8rem;
+}
+
+.reviews {
+    color: #f9d71c;
+}
+
+.box-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.client-comment p {
+    font-size: 0.9rem;
+    color: #fff;
+}
+
+.testimonial-box:hover {
+    transform: translateY(-10px);
+    transition: all ease 0.3s;
+}
+
+
+@media (max-width: 1060px) {
+    .testimonial-box {
+        width: 45%;
+        padding: 10px;
+    }
+}
+
+@media (max-width: 768px) {
+    .testimonial-box {
+        width: 100%;
+    }
+
+    .testimonial-heading h1 {
+        font-size: 1.4rem;
+    }
+}
+
+@media (max-width: 320px) {
+    .box-top{
+        flex-wrap: wrap;
+        margin-bottom: 10px;
+    }
+    .reviews{
+        margin-top: 10px;
+    }
+}
+::selection{
+    color: white;
+}

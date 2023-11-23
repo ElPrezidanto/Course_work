@@ -7,19 +7,20 @@
     <link rel="stylesheet" href="https://libs.cdnjs.net/font-awesome/6.4.2/css/all.css">
     <link rel="icon" href="img/logo.PNG">
     <link rel="stylesheet" href="style.css">
-<!--    <link rel="stylesheet" href="swiper-bundle.min.css">-->
+    <!--    <link rel="stylesheet" href="swiper-bundle.min.css">-->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="js/common.js"></script>
 </head>
 <body>
 <header>
     <div class="header-content">
-        <a href="index.html" class="brand">Component Haven<img src="img/logo.PNG"></a>
+        <a href="index.html" class="brand">Component Haven<img src="img/logo.PNG" alt="logo"></a>
         <nav>
-            <a href="#">Home</a>
-            <a href="#">About</a>
-            <a href="#">Catalog</a>
-            <a href="#">Contact</a>
+            <a href="#" id="selected-link">Home</a>
+            <a href="html/about.html">About</a>
+            <a href="html/catalog.html">Catalog</a>
+            <a href="#">Cart</a>
             <div id="marker"></div>
         </nav>
     </div>
@@ -59,94 +60,8 @@
         <h2 class="slider-title">Возможно, вам понравится</h2>
         <div class="card__container swiper">
             <div class="card__content">
-                <div class="swiper-wrapper">
-                    <article class="card__article swiper-slide">
-                        <div class="card__image">
-                            <img src="img/PC6.jpeg" alt="image" class="card__img">
-                            <div class="card__shadow"></div>
-                        </div>
-
-                        <div class="card__data">
-                            <h3 class="card__name">Kell Dawx</h3>
-                            <p class="card__description">
-                                Passionate about development and design,
-                                I carry out projects at the request of users.
-                            </p>
-
-                            <a href="#" class="card__button">View More</a>
-                        </div>
-                    </article>
-
-                    <article class="card__article swiper-slide">
-                        <div class="card__image">
-                            <img src="img/PC6.jpeg" alt="image" class="card__img">
-                            <div class="card__shadow"></div>
-                        </div>
-
-                        <div class="card__data">
-                            <h3 class="card__name">Lotw Fox</h3>
-                            <p class="card__description">
-                                Passionate about development and design,
-                                I carry out projects at the request of users.
-                            </p>
-
-                            <a href="#" class="card__button">View More</a>
-                        </div>
-                    </article>
-
-                    <article class="card__article swiper-slide">
-                        <div class="card__image">
-                            <img src="img/PC6.jpeg" alt="image" class="card__img">
-                            <div class="card__shadow"></div>
-                        </div>
-
-                        <div class="card__data">
-                            <h3 class="card__name">Sara Mit</h3>
-                            <p class="card__description">
-                                Passionate about development and design,
-                                I carry out projects at the request of users.
-                            </p>
-
-                            <a href="#" class="card__button">View More</a>
-                        </div>
-                    </article>
-
-                    <article class="card__article swiper-slide">
-                        <div class="card__image">
-                            <img src="img/PC6.jpeg" alt="image" class="card__img">
-                            <div class="card__shadow"></div>
-                        </div>
-
-                        <div class="card__data">
-                            <h3 class="card__name">Jenny Wert</h3>
-                            <p class="card__description">
-                                Passionate about development and design,
-                                I carry out projects at the request of users.
-                            </p>
-
-                            <a href="#" class="card__button">View More</a>
-                        </div>
-                    </article>
-
-                    <article class="card__article swiper-slide">
-                        <div class="card__image">
-                            <img src="img/PC6.jpeg" alt="image" class="card__img">
-                            <div class="card__shadow"></div>
-                        </div>
-
-                        <div class="card__data">
-                            <h3 class="card__name">Lexa Kin</h3>
-                            <p class="card__description">
-                                Passionate about development and design,
-                                I carry out projects at the request of users.
-                            </p>
-
-                            <a href="#" class="card__button">View More</a>
-                        </div>
-                    </article>
-                </div>
+                <div class="swiper-wrapper" id="swiper-wrapper"></div>
             </div>
-
             <!-- Navigation buttons -->
             <div class="swiper-button-next">
                 <i class="ri-arrow-right-s-line"></i>
@@ -159,6 +74,12 @@
             <!-- Pagination -->
             <div class="swiper-pagination"></div>
         </div>
+    </section>
+    <section id="testimonials">
+        <div class="testimonial-heading">
+            <h1>Отзывы наших клиентов</h1>
+        </div>
+        <div class="testimonials-box-container"></div>
     </section>
 </main>
 <footer>
@@ -216,7 +137,5 @@
 </footer>
 
 <script src="script.js"></script>
-<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
-<!--<script src="swiper-bundle.min.js"></script>-->
 </body>
 </html>
