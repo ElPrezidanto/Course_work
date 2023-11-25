@@ -1,5 +1,5 @@
 window.addEventListener("load", function () {
-    function generateCard(name, imgSrc, description, price) {
+    function generateCard(name, imgSrc) {
         const swiperWrapper = document.getElementById("about-swiper-wrapper");
         const article = document.createElement("article");
         article.classList.add("card__article", "swiper-slide");
@@ -11,44 +11,19 @@ window.addEventListener("load", function () {
             </div>
             <div class="card__data">
                 <h3 class="card__name">${name}</h3>
-                <p class="card__description">${description}</p>
-                <div class="price"><p>${price}</p></div>
                 <a href="#" class="card__button">View More</a>
-                <a href="#" class="card__button"><i class="fa-solid fa-cart-shopping"></i></a>
             </div>
         </article>
     `;
         swiperWrapper.appendChild(article);
     }
 
-    generateCard("Intel Core i9", "../img/Intel.png", "Мощный процессор Intel Core i7 предоставляет выдающуюся производительность, обеспечивая плавный запуск системы.", "19 990₽");
-    generateCard("Asus Rog Strix", "../img/MB.png", "Надежная материнская плата Asus Rog Strix обеспечивает стабильную эффективную работу вашей системы.", "27 990₽");
-    generateCard("RTX 3090", "../img/GC.png", "RTX 3090 от NVidia предоставляет выдающуюся графику и поддерживает плавный запуск современных игр с высоким разрешением.", "95 990₽");
-    generateCard("Be Quiet", "../img/BQ.png", "Надежный блок питания Be Quiet обеспечивает стабильное и эффективное энергопитание для всех комплектующих вашего компьютера.", "12 990₽");
-    generateCard("DeepCool", "../img/DC.png", "DeepCool AG400 эффективно снижает температуру комплектующих, обеспечивая оптимальные условия для их работы и долговечности.", "4 290₽");
+    generateCard("Шилов Павел", "../img/our_team/Pasha_title.png");
+    generateCard("Хананяев Энрики", "../img/our_team/Enriki_title.png");
+    generateCard("Якобчук Кирилл", "../img/our_team/Kirill_title.png");
+    generateCard("Шкабара Николай", "../img/our_team/Nikolay_title.png");
+    generateCard("Вилков Никита", "../img/our_team/Nikita_title.png");
 });
-
-/*document.addEventListener('DOMContentLoaded', function() {
-    let marker_about = document.querySelector('#marker');
-    let item_about = document.querySelectorAll('nav a');
-
-    function indicator(e) {
-        marker_about.style.left = e.offsetLeft + 'px';
-        marker_about.style.width = e.offsetWidth + 'px';
-    }
-
-    item_about.forEach(link => {
-        link.addEventListener('click', (e) => {
-            indicator(e.target);
-        });
-    });
-
-    // Установите начальное положение для "About" после загрузки страницы
-    let aboutLink = document.getElementById('about-link');
-    if (aboutLink) {
-        indicator(aboutLink);
-    }
-});*/
 /*window.onload = function() {
     let swiperCardsAbout = new Swiper(".card__content", {
         loop: true,

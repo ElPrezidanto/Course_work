@@ -5,6 +5,7 @@
 @import "css/footer.css";
 @import "css/about.css";
 @import "css/catalog.css";
+@import "css/card_PS.css";
 
 /*=============== GOOGLE FONTS ===============*/
 @import url("https://fonts.googleapis.com/css2?family=Bai+Jamjuree:wght@400;500;600&display=swap");
@@ -220,6 +221,7 @@ a {
     font-family: 'Comfortaa', sans-serif;
     font-weight: 600;
     font-size: 2rem;
+    margin-top: 10px;
 }
 
 .advantages .cards {

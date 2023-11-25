@@ -163,3 +163,8 @@
     margin-bottom: 15px;
     text-indent: 30px;
 }
+
+.main_about .card__data,
+.main_about .card__img{
+    height: auto;
+}

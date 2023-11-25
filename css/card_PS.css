@@ -1,0 +1,94 @@
+.main-BQ{
+    /*padding: 80px 15%;*/
+    flex: 1 0 auto;
+    padding: 80px 15% 20px
+}
+
+.product-card {
+    margin: 50px 0;
+    width: 100%;
+}
+
+.product-card h2 {
+    display: block;
+    font-size: 2em;
+    margin-block-start: 0.67em;
+    margin-block-end: 0.67em;
+    margin-inline-start: 0;
+    margin-inline-end: 0;
+    font-weight: bold;
+}
+
+.BQ-block {
+    display: flex;
+}
+
+.product-card .BQ-img {
+    /*width: 500px;*/
+    height: auto;
+    margin-right: 20px;
+}
+
+.BQ-block .BQ-info {
+    text-indent: 1.25em;
+    font-size: 18px;
+    text-align: justify;
+    line-height: 1.5;
+}
+
+.BQ-info {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.BQ-block .BQ-info .cost {
+    font-size: 2.5rem;
+}
+
+.cost {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.cost button{
+    background-color: var(--container-color);
+    color: #ffffff;
+    font-size: 18px;
+    height: 50px;
+    border-radius: 10px;
+    border: none;
+    width: 20%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.BQ-characteristic .head-list{
+    padding-inline-start: 0;
+}
+
+.BQ-characteristic .type{
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+    padding: 0;
+    margin-bottom: 15px;
+}
+
+.BQ-characteristic .type p{
+    max-width: 50%;
+    bottom: -5px;
+}
+
+.BQ-characteristic .type .descrip{
+    text-align: right;
+}
+
+.main-BQ .footer-container{
+    position: relative;
+    bottom: 0;
+}
+.main-BQ button span{
+    margin-left: 10px;
+}
