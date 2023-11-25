@@ -518,6 +518,7 @@ a {
 
 .reviews {
     color: #f9d71c;
+    display: inline-flex;
 }
 
 .box-top {
@@ -556,14 +557,16 @@ a {
 }
 
 @media (max-width: 320px) {
-    .box-top{
+    .box-top {
         flex-wrap: wrap;
         margin-bottom: 10px;
     }
-    .reviews{
+
+    .reviews {
         margin-top: 10px;
     }
 }
-::selection{
-    color: white;
+
+::selection {
+    background-color: rgba(0, 136, 246, 0.78);
 }

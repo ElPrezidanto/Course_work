@@ -1,4 +1,4 @@
-window.addEventListener("load", function() {
+window.addEventListener("load", function () {
     let swiperCardsAbout = new Swiper(".card__content", {
         loop: true,
         spaceBetween: 32,
@@ -26,7 +26,7 @@ window.addEventListener("load", function() {
     });
 });
 
-document.addEventListener('DOMContentLoaded', function() {
+window.addEventListener('load', function () {
     let marker = document.querySelector('#marker');
     let item = document.querySelectorAll('nav a');
 
@@ -42,8 +42,8 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 
     // Установите начальное положение для "home" после загрузки страницы
-    let homeLink = document.getElementById('selected-link');
-    if (homeLink) {
-        indicator(homeLink);
+    let link = document.getElementById('selected-link');
+    if (link) {
+        indicator(link);
     }
 });

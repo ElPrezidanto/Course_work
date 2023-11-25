@@ -1,7 +1,11 @@
-.main-BQ{
+.main-BQ {
     /*padding: 80px 15%;*/
     flex: 1 0 auto;
     padding: 80px 15% 20px
+}
+
+.main-BQ img {
+    max-width: none;
 }
 
 .product-card {
@@ -24,14 +28,14 @@
 }
 
 .product-card .BQ-img {
-    /*width: 500px;*/
+    width: 400px;
     height: auto;
     margin-right: 20px;
 }
 
 .BQ-block .BQ-info {
     text-indent: 1.25em;
-    font-size: 18px;
+    font-size: 1.5rem;
     text-align: justify;
     line-height: 1.5;
 }
@@ -52,23 +56,25 @@
     align-items: center;
 }
 
-.cost button{
+.cost button {
     background-color: var(--container-color);
     color: #ffffff;
     font-size: 18px;
     height: 50px;
     border-radius: 10px;
     border: none;
-    width: 20%;
+    width: 40%;
     display: flex;
     align-items: center;
     justify-content: center;
+    padding: 10px 20px;
 }
-.BQ-characteristic .head-list{
+
+.BQ-characteristic .head-list {
     padding-inline-start: 0;
 }
 
-.BQ-characteristic .type{
+.BQ-characteristic .type {
     display: flex;
     justify-content: space-between;
     position: relative;
@@ -76,19 +82,34 @@
     margin-bottom: 15px;
 }
 
-.BQ-characteristic .type p{
-    max-width: 50%;
-    bottom: -5px;
+.BQ-characteristic .type:after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 0;
+    top: 50%;
+    left: 0;
+    border-bottom: 2px dotted rgba(255, 255, 255, 0.3);
+    z-index: 0;
 }
 
-.BQ-characteristic .type .descrip{
+.BQ-characteristic .type p {
+    max-width: 50%;
+    bottom: -5px;
+    background-color: #0f1219;
+    z-index: 1;
+}
+
+.BQ-characteristic .type .descrip {
     text-align: right;
 }
 
-.main-BQ .footer-container{
+
+.main-BQ .footer-container {
     position: relative;
     bottom: 0;
 }
-.main-BQ button span{
+
+.main-BQ button span {
     margin-left: 10px;
 }
