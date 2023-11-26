@@ -21,6 +21,7 @@
     margin-inline-start: 0;
     margin-inline-end: 0;
     font-weight: bold;
+    text-align: center;
 }
 
 .BQ-block {
@@ -30,7 +31,7 @@
 .product-card .BQ-img {
     width: 400px;
     height: auto;
-    margin-right: 20px;
+    margin: 0 auto;
 }
 
 .BQ-block .BQ-info {
@@ -38,6 +39,9 @@
     font-size: 1.5rem;
     text-align: justify;
     line-height: 1.5;
+}
+.BQ-block .BQ-about{
+    margin-left: 20px;
 }
 
 .BQ-info {
@@ -80,6 +84,7 @@
     position: relative;
     padding: 0;
     margin-bottom: 15px;
+    align-items: center;
 }
 
 .BQ-characteristic .type:after {
@@ -112,4 +117,38 @@
 
 .main-BQ button span {
     margin-left: 10px;
+}
+
+@media (max-width: 1180px) {
+    .BQ-block {
+        flex-direction: column;
+        text-align: center;
+        justify-content: center;
+    }
+}
+
+@media (max-width: 579px){
+    .cost{
+        flex-direction: column;
+        margin-bottom: 20px;
+    }
+    .cost button{
+        width: auto;
+    }
+    .main-BQ h2{
+        font-size: 1.5rem;
+    }
+    .product-card .BQ-img{
+        width: 280px;
+    }
+    .BQ-block .BQ-about{
+        font-size: 1rem;
+        margin: 0 auto;
+    }
+    .BQ-characteristic .type:after{
+        display: none;
+    }
+    .BQ-characteristic .type{
+        margin-bottom: 20px;
+    }
 }

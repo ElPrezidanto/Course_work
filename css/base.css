@@ -6,10 +6,10 @@
 }
 
 body {
-    /*display: flex;*/
+    /*display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: center;
+    align-items: center;*/
     min-height: 100vh;
     background: #0f1219;
     color: #fff;

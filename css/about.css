@@ -158,7 +158,7 @@
 
 .about-text p {
     color: #fff;
-    font-size: 1rem;
+    font-size: 1.5rem;
     line-height: 1.6;
     margin-bottom: 15px;
     text-indent: 30px;
@@ -167,4 +167,22 @@
 .main_about .card__data,
 .main_about .card__img{
     height: auto;
+}
+
+@media (max-width: 586px) {
+    .card-container{
+        grid-template-columns: repeat(2,auto);
+    }
+    .main_about h2,
+    .main_about .slider-title{
+        font-size: 2rem;
+    }
+    .about-text p{
+        font-size: 1rem;
+    }
+}
+@media (max-width: 400px) {
+    .card-container{
+        grid-template-columns: repeat(1,auto);
+    }
 }

@@ -101,10 +101,6 @@ footer .copyrightText {
     z-index: 100;
 }
 
-/*header main{
-    min-height: 100%;
-    margin-bottom: -220px;
-}*/
 @media (max-width: 991px) {
     footer {
         padding: 40px;
@@ -117,7 +113,7 @@ footer .copyrightText {
         grid-gap: 20px;
     }
 
-    .copyrightText {
+    footer .copyrightText {
         padding: 20px 40px 30px;
     }
 }
