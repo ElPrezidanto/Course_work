@@ -15,11 +15,15 @@
 <header>
     <div class="header-content">
         <a href="index.html" class="brand">Component Haven<img src="img/logo.PNG" alt="logo"></a>
-        <nav>
-            <a href="#" id="selected-link">Home</a>
-            <a href="html/about.html">About</a>
-            <a href="html/catalog.html">Catalog</a>
-            <a href="#">Cart</a>
+        <input id="menu-toggle" type="checkbox"/>
+        <label class='menu-button-container' for="menu-toggle">
+            <div class='menu-button'></div>
+        </label>
+        <nav class="menu">
+            <a href="#" id="selected-link">Домой</a>
+            <a href="html/about.html">О нас</a>
+            <a href="html/catalog.html">Каталог</a>
+            <a href="#">Корзина</a>
             <div id="marker"></div>
         </nav>
     </div>
