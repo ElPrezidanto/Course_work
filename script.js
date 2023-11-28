@@ -60,11 +60,11 @@ function generateStars(rating) {
 }
 
 window.addEventListener("load", function () {
-    generateCard("Intel Core i7", "img/components/intel7.png", "Мощный процессор Intel Core i7 предоставляет выдающуюся производительность, обеспечивая плавный запуск системы.", "19 990₽");
-    generateCard("Asus Rog Strix", "img/components/MB.png", "Надежная материнская плата Asus Rog Strix обеспечивает стабильную эффективную работу вашей системы.", "27 990₽");
+    generateCard("Intel Core i7", "img/components/intel7.png", "Мощный процессор Intel Core i7 предоставляет выдающуюся производительность, обеспечивая плавный запуск системы.", "20 990₽");
+    generateCard("Asus Rog Strix", "img/components/MB.png", "Надежная материнская плата Asus Rog Strix обеспечивает стабильную эффективную работу вашей системы.", "23 990₽");
     generateCard("RTX 3090", "img/components/GC.png", "RTX 3090 от NVidia предоставляет выдающуюся графику и поддерживает плавный запуск современных игр с высоким разрешением.", "95 990₽");
-    generateCard("Be Quiet", "img/components/BQ.png", "Надежный блок питания Be Quiet обеспечивает стабильное и эффективное энергопитание для всех комплектующих вашего компьютера.", "12 990₽");
-    generateCard("DeepCool", "img/components/DC.png", "DeepCool AG400 эффективно снижает температуру комплектующих, обеспечивая оптимальные условия для их работы и долговечности.", "4 290₽");
+    generateCard("Be Quiet", "img/components/BQ.png", "Надежный блок питания Be Quiet обеспечивает стабильное и эффективное энергопитание для всех комплектующих вашего компьютера.", "21 990₽");
+    generateCard("DeepCool", "img/components/DC.png", "DeepCool AG400 эффективно снижает температуру комплектующих, обеспечивая оптимальные условия для их работы и долговечности.", "3 390₽");
 });
 
 window.addEventListener("load", function () {

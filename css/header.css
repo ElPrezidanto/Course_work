@@ -117,6 +117,12 @@ nav a {
     margin-top: 0;
     transform: rotate(-45deg);
 }
+@media (max-width: 834px){
+    .brand {
+        font-size: 1.45rem;
+    }
+}
+
 @media (max-width: 768px) {
     .brand {
         font-size: 22px;

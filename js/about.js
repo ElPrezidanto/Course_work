@@ -24,30 +24,3 @@ window.addEventListener("load", function () {
     generateCard("Шкабара Николай", "../img/our_team/Nikolay_title.png");
     generateCard("Вилков Никита", "../img/our_team/Nikita_title.png");
 });
-/*window.onload = function() {
-    let swiperCardsAbout = new Swiper(".card__content", {
-        loop: true,
-        spaceBetween: 32,
-        grabCursor: true,
-
-        pagination: {
-            el: ".swiper-pagination",
-            clickable: true,
-            dynamicBullets: true,
-        },
-
-        navigation: {
-            nextEl: ".swiper-button-next",
-            prevEl: ".swiper-button-prev",
-        },
-
-        breakpoints: {
-            600: {
-                slidesPerView: 2,
-            },
-            968: {
-                slidesPerView: 3,
-            },
-        },
-    });
-}*/
