@@ -67,7 +67,7 @@ nav a {
     filter: drop-shadow(0 5px 25px #80f9ff);
 }
 
-.menu-button-container { /*Для телефонов*/
+.menu-button-container {
     display: none;
     height: 100%;
     width: 30px;
@@ -84,7 +84,7 @@ nav a {
 
 .menu-button,
 .menu-button::before,
-.menu-button::after { /*устанавливаем свойства при переключении кнопок*/
+.menu-button::after {
     display: block;
     background-color: #fff;
     position: absolute;
@@ -166,7 +166,6 @@ nav a {
     }
 
     .menu > a {
-        /* Изменено: стили к дочернему элементу <a> внутри .menu */
         display: flex;
         justify-content: center;
         margin: 0;

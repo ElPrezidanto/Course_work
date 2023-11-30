@@ -1,5 +1,4 @@
 .main-BQ {
-    /*padding: 80px 15%;*/
     flex: 1 0 auto;
     padding: 80px 15% 20px
 }
@@ -77,6 +76,7 @@
     align-items: center;
     justify-content: center;
     padding: 10px 20px;
+    cursor: pointer;
 }
 
 .BQ-characteristic .head-list {
