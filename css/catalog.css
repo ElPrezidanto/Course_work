@@ -12,7 +12,7 @@
     font-size: 3.5rem;
     margin: 20px 0;
     text-align: center;
-    color: #fff; /* Цвет текста заголовка */
+    color: #00ffff; /* Цвет текста заголовка */
     font-family: 'Comfortaa', sans-serif;
 
 }
@@ -26,7 +26,8 @@
 .category-title {
     text-align: center;
     margin: 20px 0;
-    font-size: 2rem;
+    font-size: 2.5rem;
+    color:#00ffff;
 }
 
 .main_catalog .card__container {

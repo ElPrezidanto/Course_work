@@ -27,7 +27,15 @@
 a {
     text-decoration: none;
 }
-
+/*#main{
+    padding: 100px 20px 20px 20px;
+}*/
+.slider-title,
+.testimonial-heading h2,
+.advantages h2 {
+    font-size: 2.5rem;
+    color: #00ffff;
+}
 .container {
     margin-top: 20px;
     height: auto;
@@ -38,10 +46,8 @@ a {
 }
 
 .slider-title {
-    font-size: 2rem;
     margin-bottom: 20px;
     text-align: center;
-    color: #fff;
     font-family: 'Comfortaa', sans-serif;
 
 }
@@ -200,12 +206,10 @@ a {
 }
 
 .advantages h2 {
-    color: #fff;
     text-align: center;
     font-family: 'Comfortaa', sans-serif;
     font-weight: 600;
-    font-size: 2rem;
-    margin-top: 10px;
+    margin-top: 15px;
 }
 
 .advantages .cards {
@@ -433,10 +437,8 @@ a {
 }
 
 .testimonial-heading h2 {
-    font-size: 2.2rem;
     font-weight: 500;
     font-family: 'Comfortaa', sans-serif;
-    color: #fff;
     text-align: center;
 }
 
@@ -523,20 +525,14 @@ a {
     transition: all ease 0.3s;
 }
 
+
 @media screen and (max-width: 320px) {
     .card__data {
         padding: 1rem;
     }
-    .box-top {
-        flex-wrap: wrap;
-        margin-bottom: 10px;
-    }
-
-    .reviews {
-        margin-top: 10px;
-    }
 }
 
+/*For medium devices*/
 @media screen and (min-width: 768px) {
     .card__content {
         margin-inline: 3rem;
@@ -546,18 +542,10 @@ a {
     .swiper-button-prev {
         display: block;
     }
-    .testimonial-box {
-        width: 100%;
-    }
-
-    .testimonial-heading h2 {
-        font-size: 2rem;
-    }
-    .advantages{
-        padding-top: 0;
-    }
+    .
 }
 
+/* For large devices */
 @media screen and (min-width: 1120px) {
     .card__container {
         max-width: 1120px;
@@ -570,9 +558,42 @@ a {
     .swiper-button-next {
         right: -1rem;
     }
+}
+
+@media (max-width: 1100px) {
     .testimonial-box {
         width: 45%;
         padding: 10px;
+    }
+}
+
+@media (max-width: 768px) {
+    .testimonial-box {
+        width: 100%;
+    }
+
+    /*.testimonial-heading h2 {
+        font-size: 2rem;
+    }*/
+    .advantages{
+        padding-top: 0;
+    }
+    .slider-title,
+    .testimonial-heading h2,
+    .advantages h2 {
+        font-size: 2rem;
+    }
+
+}
+
+@media (max-width: 320px) {
+    .box-top {
+        flex-wrap: wrap;
+        margin-bottom: 10px;
+    }
+
+    .reviews {
+        margin-top: 10px;
     }
 }
 
