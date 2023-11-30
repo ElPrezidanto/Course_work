@@ -1,12 +1,12 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800;900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@300;400;500;600;700&family=Poppins:wght@200;300;400;500;600;700;800;900&display=swap');
-@import "../css/base.css";
-@import "../css/header.css";
-@import "../css/footer.css";
-@import "../css/about.css";
-@import "../css/catalog.css";
-@import "../css/card_PS.css";
-@import "../css/cart.css";
+@import "css/base.css";
+@import "css/header.css";
+@import "css/footer.css";
+@import "css/about.css";
+@import "css/catalog.css";
+@import "css/card_PS.css";
+@import "css/cart.css";
 
 /*=============== GOOGLE FONTS ===============*/
 @import url("https://fonts.googleapis.com/css2?family=Bai+Jamjuree:wght@400;500;600&display=swap");

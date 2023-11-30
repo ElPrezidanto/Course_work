@@ -1,9 +1,58 @@
 function priceToNumber(price) {
-    const numberString = price.replace(/\D/g, ''); // Удаляем все нецифровые символы
+    const numberString = price.replace(/\D/g, '');
     return parseInt(numberString, 10);
 }
 
 function addToCartFromCatalogue(button) {
+    let jsonItems = localStorage.getItem("cart");
+    console.log(`addToCartFromCatalogue() cart: ${jsonItems}`);
+    let items = (jsonItems) ? JSON.parse(jsonItems) : [];
+
+    let compCard = button.parentNode.parentNode;
+    console.log(compCard)
+    let compName = compCard.querySelector('.card__data').querySelector('.card__name').innerHTML;
+    let compPrice = priceToNumber(compCard.querySelector('.card__data').querySelector('.price').querySelector('p').innerHTML);
+    let compImage = compCard.querySelector('.card__image').querySelector('img').getAttribute("src");
+    /*let cardImage = compCard.querySelector('.card__img');
+    let compImage = cardImage.getAttribute('src');*/
+
+    let item = {
+        name: compName,
+        price: compPrice,
+        image: compImage,
+        amount: 1
+    }
+
+    let itemAlreadyInCart = false;
+
+    for (let i of items) {
+        if (i.name === item.name) {
+            i.amount += 1;
+            itemAlreadyInCart = true;
+            break;
+        }
+    }
+
+    if (!itemAlreadyInCart) {
+        items.push(item);
+    }
+
+    localStorage.setItem("cart", JSON.stringify(items));
+    console.log(`Added to cart: ${compName} ${compPrice}`);
+    console.log(items);
+
+
+    var notification = document.getElementById('notification');
+    if (notification.style.display === 'none' || notification.style.display === '') {
+        notification.style.display = 'block';
+        setTimeout(function () {
+            notification.style.display = 'none';
+        }, 3000);
+    }
+}
+
+
+function addToCartFromHome(button) {
     let jsonItems = localStorage.getItem("cart");
     console.log(`addToCartFromCatalogue() cart: ${jsonItems}`);
     let items = (jsonItems) ? JSON.parse(jsonItems) : [];
