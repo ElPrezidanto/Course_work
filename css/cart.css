@@ -1,4 +1,4 @@
-.main-cart h2{
+.main-cart h2 {
     display: block;
     font-size: 2em;
     margin-block-start: 0.67em;
@@ -6,7 +6,7 @@
     margin-inline-start: 0;
     margin-inline-end: 0;
     font-weight: bold;
-    margin-top: 10px;
+    margin-top: 20px;
     text-align: center;
 }
 
@@ -24,8 +24,8 @@
     padding: 0 15%;
 }
 
-.cart .cart p {
-    margin-top: 10px;
+.main-cart .cart .nothing-in-cart {
+    margin-top: 20px;
 }
 
 .cart-items-wrapper {
@@ -37,11 +37,12 @@
 .cart-item {
     display: flex;
     gap: 1em;
-
+    margin-bottom: 10px;
 }
 
-.cart-item img {
-    height: 6em;
+.cart-item .cart-img {
+    width: 180px;
+    height: auto;
     flex-shrink: 1;
 }
 
@@ -88,7 +89,7 @@ form {
 }
 
 form label {
-    font-size: .6em;
+    font-size: .8em;
     margin-top: .3em;
 }
 
@@ -98,7 +99,7 @@ form input {
 }
 
 form p {
-    font-size: .6em;
+    font-size: .8em;
 }
 
 .payment-radio-wrap {
@@ -118,7 +119,7 @@ form p {
 }
 
 .purchase-button {
-    font-size: .7em;
+    font-size: .9em;
     padding: .3em;
     margin-top: .5em;
     background-color: var(--first-color);
@@ -131,15 +132,35 @@ form p {
 .purchase-button:hover {
     background: rgb(255, 242, 0);
 }
+/* CSS */
+.quantity-buttons {
+    display: flex;
+    gap: 5px;
+    margin-top: 10px;
+}
+
+.quantity-button {
+    background-color: #3498db;
+    color: #fff;
+    padding: 5px 10px;
+    cursor: pointer;
+    border: none;
+    border-radius: 5px;
+}
+
+.quantity-button:hover {
+    background-color: #2980b9;
+}
+
 
 @media (max-width: 1000px) {
-    .cart {
+    .main-cart .cart {
         padding: 0 1%;
     }
 }
 
 @media (max-width: 650px) {
-    .cart {
+    .main-cart .cart {
         grid-template-columns: 1fr;
     }
 }

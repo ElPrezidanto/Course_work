@@ -1,13 +1,18 @@
+function priceToNumber(price) {
+    const numberString = price.replace(/\D/g, ''); // Удаляем все нецифровые символы
+    return parseInt(numberString, 10);
+}
+
 function addToCartFromCatalogue(button) {
     let jsonItems = localStorage.getItem("cart");
     console.log(`addToCartFromCatalogue() cart: ${jsonItems}`);
     let items = (jsonItems) ? JSON.parse(jsonItems) : [];
 
-    let compCard = button.parentNode;
+    let compCard = button.parentNode.parentNode;
     console.log(compCard)
-    let compName = compCard.querySelector('.card__name').innerHTML;
-    let compPrice = Number(compCard.querySelector('.price').innerHTML);
-    let compImage = compCard.querySelector('img').getAttribute("src");
+    let compName = compCard.querySelector('.card__data').querySelector('.card__name').innerHTML;
+    let compPrice = priceToNumber(compCard.querySelector('.card__data').querySelector('.price').querySelector('p').innerHTML);
+    let compImage = compCard.querySelector('.card__image').querySelector('img').getAttribute("src");
     /*let cardImage = compCard.querySelector('.card__img');
     let compImage = cardImage.getAttribute('src');*/
 
@@ -45,15 +50,60 @@ function addToCartFromCatalogue(button) {
         }, 3000); // Уведомление исчезает спустя 3 секунды
     }
 }
+function addToCartFromHome(button) {
+    let jsonItems = localStorage.getItem("cart");
+    console.log(`addToCart() cart: ${jsonItems}`);
+    let items = (jsonItems) ? JSON.parse(jsonItems) : [];
+
+    let compContainer = button.parentNode.parentNode.parentNode;
+    console.log(compContainer)
+    let compName = compContainer.querySelector('.comp_name').innerHTML;
+    let compPrice = priceToNumber(compContainer.querySelector('.price').innerHTML);
+    let compImage = compContainer.querySelector('img').getAttribute("src");
+
+    let item = {
+        name: compName,
+        price: compPrice,
+        image: compImage,
+        amount: 1
+    }
+
+    let itemAlreadyInCart = false;
+
+    for (let i of items) {
+        if (i.name === item.name) {
+            i.amount += 1;
+            itemAlreadyInCart = true;
+            break;
+        }
+    }
+
+    if (!itemAlreadyInCart) {
+        items.push(item);
+    }
+
+    localStorage.setItem("cart", JSON.stringify(items));
+    console.log(`Added to cart: ${compName} ${compPrice}`);
+    console.log(items);
+
+    var notification = document.getElementById('notification');
+    if (notification.style.display === 'none' || notification.style.display === '') {
+        notification.style.display = 'block';
+        setTimeout(function () {
+            notification.style.display = 'none';
+        }, 3000); // Уведомление исчезает спустя 3 секунды
+    }
+}
 
 function addToCart(button) {
     let jsonItems = localStorage.getItem("cart");
     console.log(`addToCart() cart: ${jsonItems}`);
     let items = (jsonItems) ? JSON.parse(jsonItems) : [];
 
-    let compContainer = button.parentNode.parentNode;
+    let compContainer = button.parentNode.parentNode.parentNode.parentNode;
+    console.log(compContainer)
     let compName = compContainer.querySelector('.comp_name').innerHTML;
-    let compPrice = Number(compContainer.querySelector('.price').innerHTML);
+    let compPrice = priceToNumber(compContainer.querySelector('.price').innerHTML);
     let compImage = compContainer.querySelector('img').getAttribute("src");
 
     let item = {
@@ -101,7 +151,7 @@ function drawCart() {
     }
 
     console.log("inserting");
-    document.querySelector('main').innerHTML = `
+    document.querySelector('.main-cart').innerHTML = `
     <h2>Корзина</h2>
     <div class="cart">
         <div class="cart-items-wrapper">
@@ -138,11 +188,17 @@ function drawCart() {
         let cartItem = document.createElement("div");
         cartItem.classList.add("cart-item");
         cartItem.innerHTML =
-            `<img src="${item.image}" alt="">
+            `<div class="cart-img">
+                <img src="${item.image}" alt="">
+            </div>
             <div class="cart-item-info">
                 <p class="comp-name">${item.name}</p>
                 <p class="comp-price">${item.price}₽ x ${item.amount}</p>
                 <p class="total-price">${item.price * item.amount}₽</p>
+                <div class="quantity-buttons">
+                    <button class="quantity-button" onclick="updateCartItemAmount(this, -1)">-</button>
+                    <button class="quantity-button" onclick="updateCartItemAmount(this, 1)">+</button>
+                </div>
             </div>
             <div class="remove-cart-item">
                 <button class="fa-solid fa-trash" onclick="removeItemFromCart(this)"></button>
@@ -154,6 +210,28 @@ function drawCart() {
     }
 
     document.querySelector('.total-amount').innerHTML = totalAmount + '₽'
+}
+
+function updateCartItemAmount(button, change) {
+    let jsonItems = localStorage.getItem("cart");
+    console.log(`updateCartItemAmount() cart: ${jsonItems}`);
+    let items = (jsonItems) ? JSON.parse(jsonItems) : [];
+
+    let itemContainer = button.parentNode.parentNode;
+    let compName = itemContainer.querySelector('.comp-name').innerHTML;
+
+    for (let i of items) {
+        if (i.name === compName) {
+            i.amount += change;
+            if (i.amount < 1) {
+                i.amount = 1;
+            }
+            break;
+        }
+    }
+
+    localStorage.setItem("cart", JSON.stringify(items));
+    drawCart();
 }
 
 function removeItemFromCart(button) {

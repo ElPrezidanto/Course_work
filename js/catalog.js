@@ -9,7 +9,6 @@ function generateCard(name, imgSrc, description, price, id) {
                 <div class="card__shadow"></div>
             </div>
             <div class="card__data">
-                <img src="${imgSrc}" alt="image" class="card__img__cart">
                 <h3 class="card__name">${name}</h3>
                 <p class="card__description">${description}</p>
                 <div class="price"><p>${price}</p></div>

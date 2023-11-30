@@ -177,8 +177,9 @@
         margin-left: -10px;
     }
 
-    .cost button {
+    .main-BQ .cost button {
         width: auto;
+        cursor: pointer;
     }
 
     .main-BQ h2 {

@@ -1,12 +1,12 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800;900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@300;400;500;600;700&family=Poppins:wght@200;300;400;500;600;700;800;900&display=swap');
-@import "css/base.css";
-@import "css/header.css";
-@import "css/footer.css";
-@import "css/about.css";
-@import "css/catalog.css";
-@import "css/card_PS.css";
-@import "css/cart.css";
+@import "../css/base.css";
+@import "../css/header.css";
+@import "../css/footer.css";
+@import "../css/about.css";
+@import "../css/catalog.css";
+@import "../css/card_PS.css";
+@import "../css/cart.css";
 
 /*=============== GOOGLE FONTS ===============*/
 @import url("https://fonts.googleapis.com/css2?family=Bai+Jamjuree:wght@400;500;600&display=swap");
@@ -117,6 +117,8 @@ a {
     font-size: var(--h2-font-size);
     color: var(--second-color);
     margin-bottom: .25rem;
+    overflow: hidden;
+    max-height: 35px;
 }
 
 .card__description {
@@ -141,6 +143,7 @@ a {
     border-radius: .25rem;
     color: var(--dark-color);
     font-weight: 600;
+    cursor: pointer;
     bottom: 0;
 }
 
@@ -176,6 +179,28 @@ a {
     background-color: var(--second-color);
 }
 
+@keyframes fadeInOut {
+    0% { opacity: 0; }
+    10% { opacity: 1; }
+    90% { opacity: 1; }
+    100% { opacity: 0; }
+}
+
+#main .notification {
+    margin-top: 4em;
+    display: none;
+    position: fixed;
+    top: 10px;
+    right: 10px;
+    padding: 20px;
+    background-color: #1e232f;
+    color: #fff;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    animation: fadeInOut 3s;
+    border: solid 2px black;
+    z-index: 999;
+}
 /*!*=============== BREAKPOINTS ===============*!*/
 /* For small devices */
 @media screen and (max-width: 320px) {

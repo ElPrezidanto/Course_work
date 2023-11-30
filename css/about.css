@@ -180,6 +180,9 @@
     .about-text p{
         font-size: 1rem;
     }
+    .advantages_about{
+        padding-top: 0;
+    }
 }
 @media (max-width: 400px) {
     .card-container{

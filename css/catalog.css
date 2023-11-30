@@ -120,6 +120,7 @@
     color: var(--dark-color);
     font-weight: 600;
     bottom: 0;
+    cursor: pointer;
 }
 
 @keyframes fadeInOut {
@@ -152,6 +153,9 @@
         grid-template-columns: repeat(2, auto);
         grid-gap: 20px;
     }
+    .main_catalog .card__description{
+        max-height: 75px;
+    }
 }
 
 @media (max-width: 666px) {
@@ -164,5 +168,14 @@
     }
     .main_catalog .catalog-title{
         font-size: 2rem;
+        margin-top: 0;
+    }
+    .category-title {
+        text-align: center;
+        margin: 20px 0;
+        font-size: 1.5rem;
+    }
+    .main_catalog{
+        padding-top: 60px;
     }
 }
