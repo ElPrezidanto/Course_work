@@ -52,7 +52,7 @@ function addToCartFromCatalogue(button) {
 }
 
 
-function addToCartFromHome(button) {
+/*function addToCartFromHome(button) {
     let jsonItems = localStorage.getItem("cart");
     console.log(`addToCartFromCatalogue() cart: ${jsonItems}`);
     let items = (jsonItems) ? JSON.parse(jsonItems) : [];
@@ -62,8 +62,8 @@ function addToCartFromHome(button) {
     let compName = compCard.querySelector('.card__data').querySelector('.card__name').innerHTML;
     let compPrice = priceToNumber(compCard.querySelector('.card__data').querySelector('.price').querySelector('p').innerHTML);
     let compImage = compCard.querySelector('.card__image').querySelector('img').getAttribute("src");
-    /*let cardImage = compCard.querySelector('.card__img');
-    let compImage = cardImage.getAttribute('src');*/
+    /!*let cardImage = compCard.querySelector('.card__img');
+    let compImage = cardImage.getAttribute('src');*!/
 
     let item = {
         name: compName,
@@ -98,7 +98,7 @@ function addToCartFromHome(button) {
             notification.style.display = 'none';
         }, 3000);
     }
-}
+}*/
 
 function addToCart(button) {
     let jsonItems = localStorage.getItem("cart");
