@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="https://libs.cdnjs.net/font-awesome/6.4.2/css/all.css">
     <link rel="icon" href="../img/logo.PNG">
     <link rel="stylesheet" href="../style.css">
-    <script src="../js/common.js" defer></script>
+    <script src="../js/cart.js"></script>
 </head>
 <body>
 <header>
@@ -22,13 +22,13 @@
             <a href="about.html">О нас</a>
             <a href="catalog.html" id="selected-link">Каталог</a>
             <a href="cart.html">Корзина</a>
-            <div id="marker"></div>
         </nav>
     </div>
 </header>
 <main class="main-BQ">
     <section class="product-card">
-        <h2>Блок питания Be Quiet Straight Power 12</h2>
+        <div class="notification" id="notification">Товар добавлен в корзину</div>
+        <h2 class="comp_name">Блок питания Be Quiet Straight Power 12</h2>
         <div class="BQ-block">
             <div class="BQ-img">
                 <img class="BQ-img" src="../img/components/BQ-big.png" alt="BQ-img">
@@ -43,7 +43,7 @@
                     Управляйте питанием вашего компьютера с уверенностью, выбирая Be Quiet Straight Power 12.</p>
                 <div class="cost">
                     <p class="BQ-price">21 990₽</p>
-                    <button class="buy">
+                    <button class="buy" onclick="addToCart(this)">
                         <i class="fa-solid fa-cart-shopping"></i> <span>Добавить в корзину</span>
                     </button>
                 </div>
